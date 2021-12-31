@@ -6,8 +6,13 @@ import DateFormatter from "../../components/date-formatter";
 import Header from "../../components/header";
 import Layout from "../../components/layout";
 import Footer from "../../components/footer";
+import { Project } from "../../lib/interfaces";
 
-export default function Projects({ allProjects }) {
+interface Props {
+  allProjects: Project[];
+}
+
+export default function Projects({ allProjects }: Props) {
   return (
     <Layout>
       <Head>
@@ -19,7 +24,12 @@ export default function Projects({ allProjects }) {
           <div key={project.slug}>
             <Link as={`/projects/${project.slug}`} href="projects/[slug]">
               <a>
-                <Image src={project.coverImage} width={400} height={225} />
+                <Image
+                  src={project.coverImage}
+                  alt="Project Cover"
+                  width={400}
+                  height={225}
+                />
               </a>
             </Link>
             <div>
