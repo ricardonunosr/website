@@ -58,13 +58,13 @@ const Home: NextPage = () => {
         </ul>
         <div className="flex gap-x-4">
           <a href="https://github.com/ricardonunosr">
-            <FontAwesomeIcon icon={faGithub} size="lg" />
+            <FontAwesomeIcon icon={faGithub} width={25} />
           </a>
           <a href="https://twitter.com/ricardonunosr">
-            <FontAwesomeIcon icon={faTwitter} size="lg" />
+            <FontAwesomeIcon icon={faTwitter} width={25} />
           </a>
           <a href="https://www.linkedin.com/in/ricardonunosr/">
-            <FontAwesomeIcon icon={faLinkedin} size="lg" />
+            <FontAwesomeIcon icon={faLinkedin} width={25} />
           </a>
         </div>
         <div className="my-4">
