@@ -1,22 +1,15 @@
-.markdown {
-  @apply text-lg leading-relaxed;
+.markdown p{
+  @apply mb-2;
 }
 
-.markdown p,
-.markdown ul,
-.markdown ol,
-.markdown blockquote {
-  @apply my-6;
+.markdown a {
+  @apply text-blue-700;
 }
 
-.markdown ul {
-  list-style: circle;
+.markdown a:hover {
+  @apply underline;
 }
 
-.markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug;
-}
-
-.markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug;
+.markdown code{
+  @apply text-sm text-red-700;
 }

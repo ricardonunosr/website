@@ -1,7 +1,5 @@
-import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import profilePic from "../public/me.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -17,8 +15,15 @@ import PokemonLogo from "../public/pokemon-logo.svg";
 import RatchetClankLogo from "../public/ratchet-clank-logo.svg";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
+import ProjectItem from "../components/project";
+import { getAllProjects } from "../lib/api";
+import { Project } from "../lib/interfaces";
 
-const Home: NextPage = () => {
+interface Props {
+  allProjects: Project[];
+}
+
+export default function Home({ allProjects }: Props) {
   return (
     <Layout>
       <Head>
@@ -48,14 +53,7 @@ const Home: NextPage = () => {
             />
           </div>
         </div>
-        <ul className="font-bold">
-          <li className="my-4">
-            <Link href="https://medium.com/@ricardonunosr">blog</Link>
-          </li>
-          <li className="my-4">
-            <Link href="/projects">projects</Link>
-          </li>
-        </ul>
+
         <div className="flex gap-x-4">
           <a href="https://github.com/ricardonunosr">
             <FontAwesomeIcon icon={faGithub} width={25} />
@@ -67,6 +65,7 @@ const Home: NextPage = () => {
             <FontAwesomeIcon icon={faLinkedin} width={25} />
           </a>
         </div>
+
         <div className="my-4">
           <h3>Games of choice:</h3>
           <div className="flex flex-wrap gap-x-12 sm:gap-x-2 ">
@@ -78,10 +77,31 @@ const Home: NextPage = () => {
             <RatchetClankLogo width={45} height={45} />
           </div>
         </div>
+
+        <div className="bg-zinc-50 h-6 border-y border-zinc-200"></div>
+
+        {allProjects.map((project, i) => {
+          return <ProjectItem key={i} project={project} />;
+        })}
       </main>
       <Footer />
     </Layout>
   );
-};
+}
 
-export default Home;
+export async function getStaticProps() {
+  const allProjects = await getAllProjects([
+    "title",
+    "date",
+    "tags",
+    "slug",
+    "coverImage",
+    "excerpt",
+    "content",
+    "githubRepo",
+  ]);
+
+  return {
+    props: { allProjects },
+  };
+}
