@@ -38,8 +38,8 @@ export default function Home({ allProjects }: Props) {
               Software Engineer at <b>Critical Techworks(BMW)</b>
             </p>
             <p className="max-w-lg leading-6 my-4">
-              I like backend dev, a little of frontend,a little of graphics
-              programming,a little of game programming... I LIKE A LOT OF THINGS
+              I like backend dev, a little of frontend, a little of graphics
+              programming, a little of game programming... I LIKE A LOT OF THINGS
               OK.
             </p>
           </div>
