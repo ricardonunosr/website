@@ -64,6 +64,9 @@ export default function Home({ allProjects }: Props) {
           <a href="https://www.linkedin.com/in/ricardonunosr/">
             <FontAwesomeIcon icon={faLinkedin} width={25} />
           </a>
+          <a href="/cv.pdf">
+            CV
+          </a>
         </div>
 
         <div className="my-4">
