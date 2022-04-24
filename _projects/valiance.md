@@ -1,7 +1,7 @@
 ---
 title: "Valiance - 3D Game Engine"
 date: "2021-06-22"
-tags: ["C++", "Graphics"]
+tags: ["C++", "Graphics","OpenGL"]
 excerpt: "3D Graphics game engine written in C++ with OpenGL"
 coverImage: "/assets/blog/valiance/cover.png"
 githubRepo: "ricardonunosr/valiance"
