@@ -15,15 +15,8 @@ import PokemonLogo from "../public/pokemon-logo.svg";
 import RatchetClankLogo from "../public/ratchet-clank-logo.svg";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
-import ProjectItem from "../components/project";
-import { getAllProjects } from "../lib/api";
-import { Project } from "../lib/interfaces";
 
-interface Props {
-  allProjects: Project[];
-}
-
-export default function Home({ allProjects }: Props) {
+export default function Home() {
   return (
     <Layout>
       <Head>
@@ -40,7 +33,7 @@ export default function Home({ allProjects }: Props) {
             <p className="max-w-lg leading-6 my-4">
               I like backend dev, a little of frontend, a little of graphics
               programming, a little of game programming... I LIKE A LOT OF THINGS
-              OK.
+              OK.<br /> At the moment looking into self-driving cars/computer vision.
             </p>
           </div>
           <div className="flex items-center">
@@ -80,31 +73,8 @@ export default function Home({ allProjects }: Props) {
             <RatchetClankLogo width={45} height={45} />
           </div>
         </div>
-
-        <div className="bg-zinc-50 h-6 border-y border-zinc-200"></div>
-
-        {allProjects.map((project, i) => {
-          return <ProjectItem key={i} project={project} />;
-        })}
       </main>
       <Footer />
     </Layout>
   );
-}
-
-export async function getStaticProps() {
-  const allProjects = await getAllProjects([
-    "title",
-    "date",
-    "tags",
-    "slug",
-    "coverImage",
-    "excerpt",
-    "content",
-    "githubRepo",
-  ]);
-
-  return {
-    props: { allProjects },
-  };
 }
