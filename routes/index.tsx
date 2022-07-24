@@ -61,6 +61,11 @@ export default function Home() {
           <a href="/cv.pdf">
             CV
           </a>
+		  <a 
+		    class={tw`text-gray-200 underline tracking-wide italic hover:text-blue-500`}
+            href="/random"> 
+		   random
+	      </a>
         </div>
 
         <div class={tw`my-4`}>
