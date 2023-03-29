@@ -1,0 +1,35 @@
+:root {
+    --text: #f8f9fa;
+    --line: #424464;
+    --background: #181819;
+    --highlight: #8faafd;
+    --link: #fbff00;
+    --scroll: #2a2b39;
+}
+
+html,
+body {
+    position: relative;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: none;
+    background-color: var(--background);
+}
+
+body {
+    font-family: 'Public Sans', system-ui, sans-serif;
+    color: var(--text);
+    font-size: 16px;
+    line-height: 28px;
+}
+
+main {
+    margin: 0 auto 2em auto;
+    max-width: 500px;
+}
+
+a {
+    color: var(--text);
+    text-decoration: none;
+    padding-bottom: 0.1em;
+    border-bottom: 1px solid var(--link);
+}

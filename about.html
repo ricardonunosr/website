@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<link rel="icon" href="data:," />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="style.css">
+<title>ric</title>
+<main>
+  <img src="./me.webp" alt="My profile pic" width="128" height="128" />
+  <h1>[ric]nuno</h1>
+  <p>
+    Software Engineer at <b>Critical Techworks(BMW)</b>
+  <ul>
+    <li>
+      <a href="https://github.com/ricardonunosr">
+        GitHub
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/ricardonunosr">
+        Twitter
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/ricardonunosr/">
+        LinkedIn
+      </a>
+    </li>
+    <li>
+      <a href="./cv.pdf">
+        CV
+      </a>
+    </li>
+  </ul>
+  <div>
+    <p>I am <code id="age">loading</code> years old</p>
+    <div>
+      👶🏻 <progress id="progress" value="50" max="1000"> </progress> 💀
+    </div>
+    <small>(based on average age span)</small>
+
+    <script>
+      const age = document.getElementById("age")
+      const progress = document.getElementById("progress")
+      function updateAge() {
+        const birthdate = new Date('1999-05-06');
+        const ageDiffMilliseconds = Date.now() - birthdate.getTime();
+        const ageDate = new Date(ageDiffMilliseconds);
+        const calculatedAge = Math.abs(ageDate.getUTCFullYear() - 1970);
+
+        age.innerText = calculatedAge
+        progress.value = (calculatedAge / 80) * 1000
+      }
+      updateAge()
+    </script>
+  </div>
+
+  <h1 id="tools-services-i-use">Tools Services I use</h1>
+  <p>I got the inspiration to write this because of this <a
+      href="https://siboehm.com/articles/22/tools-I-like">article</a>.</p>
+  <p>Something that I really connected with the article I mentioned above is the minimal config/using defaults. There is
+    nothing bad in customizing to fit your needs but I just don’t like to think I can only work optimally if I have this
+    3 million lines of config files on <a href="https://github.com/ricardonunosr/dotfiles/">my dotfiles repository</a>
+    managed by an ansible script…</p>
+  <h2 id="coding">Coding</h2>
+  <ul>
+    <li>Zsh with zsh-autosuggestions, I just like the minimal config I have with this setup and have everything that I
+      like.</li>
+    <li><a href="https://github.com/junegunn/fzf">fzf</a>, search your terminal history easily</li>
+    <li><a href="https://imhex.werwolv.net/">ImHex</a>, awesome Hex editor</li>
+  </ul>
+  <h2 id="browsing">Browsing</h2>
+  <ul>
+    <li>uBlock origin, awesome adblocker</li>
+    <li>Dark Reader, dark mode baby</li>
+    <li>Firefox, great browser I also use the Sync feature just for the bookmarks</li>
+  </ul>
+  <h2 id="misc">Misc</h2>
+  <ul>
+    <li><a href="https://excalidraw.com/">excalidraw</a>, I use this website for every drawing I need to do</li>
+    <li><a href="https://obsidian.md/">obsidian</a>, I dump every link, every task, every thought… in my obsidian vault
+    </li>
+    <li>
+      <p>iPhone Cloud storage 50 gb (cheap af)-&gt; 1 euro/month</p>
+      <ul>
+        <li>photos</li>
+        <li>contacts</li>
+        <li>phone settings</li>
+      </ul>
+    </li>
+    <li>
+      <p><a href="https://www.dropbox.com/">dropbox</a>, using the dropbox mainly to store some files about my financial
+        stuff and other things. It just works which is really nice :)</p>
+    </li>
+    <li>spotify, listening music duh.</li>
+  </ul>
+</main>
