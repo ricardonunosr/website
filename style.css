@@ -38,3 +38,14 @@ blockquote {
     background: var(--scroll);
     padding: 1px 15px;
 }
+
+pre {
+    border-style: solid;
+    border-width: 1px 1px 1px 10px;
+    border-color: var(--link);
+    padding: 4px 4px 4px 10px;
+    background-color: var(--background);
+    margin-left: 20px;
+    margin-right: 0em;
+    overflow: auto;
+}
