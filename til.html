@@ -10,5 +10,9 @@
         GCC: print all predefined macros:
     </p>
     <pre>gcc -dM -E - < /dev/null</pre>
+    <p>Clang: Analyse build times</p>
+    <pre><code class="lang-bash">CC=&#39;clang -ftime-trace&#39;
+CXX=&#39;clang++ -ftime-trace&#39;
+ClangBuildAnalyzer --all &lt;artifacts_folder&gt; &lt;capture_file&gt;</code></pre>
     <footer>Section inspiration from <a href="http://0x80.pl/til.html">here</a></footer>
 </main>
