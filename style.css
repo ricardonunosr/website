@@ -49,3 +49,8 @@ pre {
     margin-right: 0em;
     overflow: auto;
 }
+
+#posts {
+    display: flex;
+    flex-direction: column;
+}
