@@ -2,52 +2,9 @@
 <link rel="icon" href="data:," />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="style.css">
-<title>ric</title>
+<meta charset="utf-8">
+<title>Ricardo Nuno - Tool Services I use </title>
 <main>
-  <img src="./me.webp" alt="My profile pic" width="128" height="128" />
-  <h1>[ric]nuno</h1>
-  <p>
-    Software Engineer at <b>Critical Techworks(BMW)</b>
-  <ul>
-    <li>
-      <a href="https://github.com/ricardonunosr">
-        GitHub
-      </a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/in/ricardonunosr/">
-        LinkedIn
-      </a>
-    </li>
-    <li>
-      <a href="./cv.pdf">
-        CV
-      </a>
-    </li>
-  </ul>
-  <div>
-    <p>I am <code id="age">loading</code> years old</p>
-    <div>
-      👶🏻 <progress id="progress" value="50" max="1000"> </progress> 💀
-    </div>
-    <small>(based on average age span)</small>
-
-    <script>
-      const age = document.getElementById("age")
-      const progress = document.getElementById("progress")
-      function updateAge() {
-        const birthdate = new Date('1999-05-06');
-        const ageDiffMilliseconds = Date.now() - birthdate.getTime();
-        const ageDate = new Date(ageDiffMilliseconds);
-        const calculatedAge = Math.abs(ageDate.getUTCFullYear() - 1970);
-
-        age.innerText = calculatedAge
-        progress.value = (calculatedAge / 80) * 1000
-      }
-      updateAge()
-    </script>
-  </div>
-
   <h1 id="tools-services-i-use">Tools Services I use</h1>
   <p>I got the inspiration to write this because of this <a
       href="https://siboehm.com/articles/22/tools-I-like">article</a>.</p>
